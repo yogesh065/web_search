@@ -1,6 +1,5 @@
 streamlit
-openai
-llama-index
-llama-index-llms-openai
-nltk
-pypdf
+langchain-community
+langchain
+langchain_groq
+duckduckgo-search
