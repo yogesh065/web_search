@@ -16,8 +16,8 @@ llm=ChatGroq(groq_api_key=groq_api_key)
 st.title("🔎 LangChain - Chat with search")
 
 """
-In this example, we're using `StreamlitCallbackHandler` to display the thoughts and actions of an agent in an interactive Streamlit app.
-Try more LangChain 🤝 Streamlit Agent examples at [github.com/langchain-ai/streamlit-agent](https://github.com/langchain-ai/streamlit-agent).
+Here You can real time internet based questions to the chatbot. you need to be specific while asking the questions.
+This chatbot is bolt by yogesh for web search activity.
 """
 
 if "messages" not in st.session_state:
@@ -36,7 +36,6 @@ if prompt := st.chat_input(placeholder="Who won the Women's U.S. Open in 2018?")
 
     llm = llm
     search = DuckDuckGoSearchRun(name="Search")
-    st.write(search)
     search_agent = initialize_agent([search], llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handle_parsing_errors=True)
     with st.chat_message("assistant"):
         st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
