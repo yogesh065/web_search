@@ -13,11 +13,11 @@ groq_api_key=st.secrets.groq_api_key
 llm=ChatGroq(groq_api_key=groq_api_key)
 
 
-st.title("🔎 LangChain - Chat with search")
+st.title("🔎 LangChain - Chat with  web search Yogesh")
 
 """
 Here You can real time internet based questions to the chatbot. you need to be specific while asking the questions.
-This chatbot is bolt by yogesh for web search activity.
+This chatbot is bolt by Yogesh for web search activity.
 """
 
 if "messages" not in st.session_state:
